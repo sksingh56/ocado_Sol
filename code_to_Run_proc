@@ -1,0 +1,8 @@
+DECLARE input_start_process_datetime TIMESTAMP DEFAULT NULL;
+DECLARE input_end_process_datetime TIMESTAMP DEFAULT 4;
+DECLARE input_slide_window INT64 DEFAULT NULL;
+CALL `aqueous-walker-379718.ocado_sol.build_hourly_aggregagte`(input_start_process_datetime, input_end_process_datetime, input_slide_window);
+
+
+Code to run table function:
+SELECT * FROM `aqueous-walker-379718.ocado_sol.date_interval`(date_param);
